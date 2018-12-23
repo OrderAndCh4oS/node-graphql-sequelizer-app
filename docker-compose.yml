@@ -1,0 +1,12 @@
+version: '2'
+services:
+  web:
+    build: .
+    image: graphene-js-node:1
+    container_name: graphene-js-node
+    ports:
+      - 3000:3000
+    env_file: .env
+    volumes:
+      - .:/usr/src/app
+    command: "nodemon src/index.ts --watch 'src/**/*.ts' --exec 'ts-node'"

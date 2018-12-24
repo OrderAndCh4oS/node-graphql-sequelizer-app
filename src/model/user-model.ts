@@ -1,31 +1,33 @@
 import {DataTypes, Sequelize} from "sequelize";
-import generateHash from "../service/generate-hash";
-import {passwordValidation, usernameValidation} from "../validation/user-validation";
-
+import {passwordHash, verifyPassword} from "../service/password-hash";
 export const UserModel = (sequelize: Sequelize, type: DataTypes) => {
-    const user = sequelize.define(
-    'user',
-    {
-        username: {
-            type: type.STRING(44),
-            validate: usernameValidation
+    const User = sequelize.define(
+        'user',
+        {
+            username: {
+                type: type.STRING(44),
+                validate: usernameValidation
+            },
+            password: {
+                type: type.STRING,
+                validate: passwordValidation
+            }
         },
-        password: {
-            type: type.STRING,
-            validate: passwordValidation
-        }
-    },
-    {
-        indexes: [{
-            unique: true,
-            fields: ['username']
-        }]
-    });
+        {
+            indexes: [{
+                unique: true,
+                fields: ['username']
+            }]
+        });
 
-    user.beforeCreate(generateHash);
-    user.beforeUpdate(generateHash);
+    // @ts-ignore
+    User.prototype.validPassword = verifyPassword;
+    User.beforeCreate(passwordHash);
+    User.beforeUpdate(passwordHash);
 
-    return user;
+    return User;
 };
+
+import {passwordValidation, usernameValidation} from "../validation/user-validation";
 
 

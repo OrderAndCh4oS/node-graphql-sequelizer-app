@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 
-export default function generateHash(user) {
+export function passwordHash(user) {
     if (user === null) {
         throw new Error('UserModel not found');
     }
@@ -9,4 +9,8 @@ export default function generateHash(user) {
     }
     let salt = bcrypt.genSaltSync();
     return user.password = bcrypt.hashSync(user.password, salt);
+}
+
+export function verifyPassword(password, passwordHash) {
+    return bcrypt.compareSync(password, passwordHash);
 }

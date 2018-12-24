@@ -14,5 +14,19 @@ export const register = (req: Request, res: Response) => {
 };
 
 export const login = (req, res) => {
-    return res.json({user: {username: 'name', createdAt: 'A Date'}})
+    User.findOne({where: {username: 'john-boy'}})
+        .then((user) => {
+            if (!user) {
+                throw Error('Not Found');
+            }
+            // @ts-ignore
+            if (!user.validPassword(req.body.password, user.password)) {
+                return res.json('Wrong password')
+            }
+
+            // @ts-ignore
+            req.session.user = user.dataValues;
+            return res.json('Logged in, I guess');
+        });
+
 };

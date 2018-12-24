@@ -14,19 +14,15 @@ export const register = (req: Request, res: Response) => {
 };
 
 export const login = (req, res) => {
-    User.findOne({where: {username: 'john-boy'}})
+    User.findOne({where: {username: req.body.username}})
         .then((user) => {
-            if (!user) {
-                throw Error('Not Found');
-            }
             // @ts-ignore
-            if (!user.validPassword(req.body.password, user.password)) {
-                return res.json('Wrong password')
+            if (!user || !user.validPassword(req.body.password, user.password)) {
+                res.statusCode = 401;
+                return res.json({'error': {'message': 'Incorrect credentials'}});
             }
-
             // @ts-ignore
             req.session.user = user.dataValues;
-            return res.json('Logged in, I guess');
-        });
-
+            return res.json(user);
+        })
 };

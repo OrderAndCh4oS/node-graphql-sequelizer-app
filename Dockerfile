@@ -1,14 +1,13 @@
 FROM node:10
 
-WORKDIR /usr/src/app
+WORKDIR /usr/app
 
-COPY package*.json ./
+COPY ./app .
 
+RUN npm install update
 RUN npm install -g ts-node
 RUN npm install -g nodemon
-
+RUN npm install -g typescript
 RUN npm install
-
-COPY . .
 
 CMD [ "ts-node",  "index.js"]

@@ -1,18 +1,15 @@
 import {config} from 'dotenv';
 import routes from './routes';
 import express = require('express');
-import cookieSession = require('cookie-session');
-
-// Todo: Use docker!!!
-// Todo: Watch with Nodemon -exec('ts-node') or something
+import cookieSession = require("cookie-session");
 
 config();
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 app.disable('x-powered-by');
 
-app.listen(port, () => console.log(`App listening on port ${port}!`));
+export const server = app.listen(port, () => console.log(`App listening on port ${port}!`));
 
 app.use(cookieSession({
     name: 'session',
@@ -25,3 +22,5 @@ app.use(cookieSession({
 app.use(express.json());
 
 routes(app);
+
+export default app;

@@ -5,7 +5,8 @@ import {UserModel} from "../model/user-model";
 
 const sequelize = new Sequelize('graphene_js_node_db', 'admin', 'too_secret', {
     dialect: 'mysql',
-    host: 'db',
+    host: process.env.MYSQL_HOST || 'db',
+    port: process.env.MYSQL_PORT ? parseInt(process.env.MYSQL_PORT) : 3306,
     pool: {
         max: 5,
         min: 0,

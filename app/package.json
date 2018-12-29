@@ -18,7 +18,7 @@
       }
     },
     "testMatch": [
-      "**/?(*.)(spec|test).[jt]s?(x)"
+      "**/?(*.)(test).[jt]s?(x)"
     ],
     "testEnvironment": "node"
   },

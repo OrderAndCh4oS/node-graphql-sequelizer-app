@@ -14,3 +14,11 @@ export function passwordHash(user) {
 export function verifyPassword(password, passwordHash) {
     return bcrypt.compareSync(password, passwordHash);
 }
+
+export function hidePasswordHash(user) {
+// @ts-ignore
+    user = user.get({plain: true});
+    // @ts-ignore
+    delete user.password;
+    return user;
+}

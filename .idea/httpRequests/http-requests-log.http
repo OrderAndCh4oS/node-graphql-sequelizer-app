@@ -1,0 +1,580 @@
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-29T123601.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-29T123401.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-29T123227.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-29T122841.200.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-28T120859.200.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-26T111325.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-26T111316.401.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-26T111310.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-26T072904.200.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-26T072859.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-26T072851.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-26T072840.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-25T093852.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-25T093841.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-25T093831.200.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-25T093819.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-24T094421.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-24T094416.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-24T094412.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-24T094403.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-24T094315.401.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-24T094310.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-24T094305.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-24T094257.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-24T094250.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-24T094239.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-24T094154.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-24T094049.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": "pass-wrong"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-24T094022.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": "pass-wrong"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-24T093834.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": "pass-wrong"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-24T093808.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-who",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-24T093758.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-who",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-24T093752.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-24T093720.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-24T093643.403.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "pass-wrong"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-24T093630.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-24T093621.400.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "pass-wrong"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "pass-wrong"
+}
+
+<> 2018-12-24T093548.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-24T093544.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-24T093512.200.json
+
+###
+

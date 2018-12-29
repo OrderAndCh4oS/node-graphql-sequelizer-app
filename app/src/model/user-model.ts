@@ -1,5 +1,7 @@
 import {DataTypes, Sequelize} from "sequelize";
-import {passwordHash, verifyPassword} from "../service/password-hash";
+import {passwordHash, verifyPassword} from "../service/password-utilities";
+import {passwordValidation, usernameValidation} from "../validation/user-validation";
+
 export const UserModel = (sequelize: Sequelize, type: DataTypes) => {
     const User = sequelize.define(
         'user',
@@ -17,7 +19,17 @@ export const UserModel = (sequelize: Sequelize, type: DataTypes) => {
             indexes: [{
                 unique: true,
                 fields: ['username']
-            }]
+            }],
+            defaultScope: {
+                attributes: {
+                    exclude: ['password']
+                }
+            },
+            scopes: {
+                withPassword: {
+                    attributes: {},
+                }
+            }
         });
 
     // @ts-ignore
@@ -27,7 +39,4 @@ export const UserModel = (sequelize: Sequelize, type: DataTypes) => {
 
     return User;
 };
-
-import {passwordValidation, usernameValidation} from "../validation/user-validation";
-
 

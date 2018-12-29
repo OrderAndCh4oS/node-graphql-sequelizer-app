@@ -3,13 +3,12 @@ import routes from './routes';
 import express = require('express');
 import cookieSession = require("cookie-session");
 
+// Todo: Separate Server and App: https://stackoverflow.com/a/53712305/2562137
+
 config();
 const app = express();
-const port = process.env.PORT || 3001;
 
 app.disable('x-powered-by');
-
-export const server = app.listen(port, () => console.log(`App listening on port ${port}!`));
 
 app.use(cookieSession({
     name: 'session',

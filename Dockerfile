@@ -10,4 +10,4 @@ RUN npm install -g nodemon
 RUN npm install -g typescript
 RUN npm install
 
-CMD [ "ts-node",  "index.js"]
+CMD [ "ts-node",  "./src/server.js"]

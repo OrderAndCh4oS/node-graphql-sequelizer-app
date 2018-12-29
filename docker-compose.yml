@@ -2,7 +2,7 @@ version: '2'
 services:
   db:
     image: mysql:8
-    container_name: graphene-js-node-db
+    container_name: graphene-js-node-model
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     ports:

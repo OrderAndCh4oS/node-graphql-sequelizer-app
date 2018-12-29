@@ -9,4 +9,3 @@ class Query {
 }
 
 export const schema = new Schema({query: Query});
-

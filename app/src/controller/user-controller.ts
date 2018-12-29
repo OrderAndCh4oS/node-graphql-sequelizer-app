@@ -1,10 +1,10 @@
 import {ValidationError} from 'sequelize';
 import {Request, Response} from 'express';
-import {User} from "../orm/sequelize";
 import {hidePasswordHash} from "../service/password-utilities";
+import model from "../model";
 
 export const register = (req: Request, res: Response) => {
-    User.create(req.body)
+    model.user.create(req.body)
         .then(user => {
             user = hidePasswordHash(user);
             return res.json(user);
@@ -16,7 +16,8 @@ export const register = (req: Request, res: Response) => {
 };
 
 export const login = (req, res) => {
-    User.scope('withPassword').findOne({where: {username: req.body.username}})
+    model.user.scope('withPassword')
+        .findOne({where: {username: req.body.username}})
         .then((user) => {
             // @ts-ignore
             if (!user || !user.validPassword(req.body.password, user.password)) {

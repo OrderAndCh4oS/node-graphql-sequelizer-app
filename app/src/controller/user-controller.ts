@@ -16,6 +16,10 @@ export const register = (req: Request, res: Response) => {
 };
 
 export const login = (req, res) => {
+    if (!(req.body.hasOwnProperty('username') && (req.body.hasOwnProperty('password')))) {
+        res.statusCode = 400;
+        return res.json({'error': {'message': 'Username and Password parameters required in json request'}});
+    }
     model.user.scope('withPassword')
         .findOne({where: {username: req.body.username}})
         .then((user) => {

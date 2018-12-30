@@ -25,12 +25,9 @@ describe('Auth Test Suite', () => {
             // Todo: move to mock data provider
             const username = "jane_doe";
             const password = "secret_word";
-            const result = await request(app).post('/register')
-                .type('json')
-                .send(JSON.stringify({
-                    username,
-                    password
-                }))
+            const result = await request(app)
+                .post('/register')
+                .send({username, password})
                 .set('Accept', 'application/json');
 
             expect(result.statusCode).toBe(200);
@@ -45,35 +42,39 @@ describe('Auth Test Suite', () => {
 
     describe('POST /login - Login a user', () => {
 
+        const username = 'jimbo';
+        const password = 'too_secret';
+
         beforeAll(async () => {
-            await model.user.create({username: 'tim', password: 'super_secret'})
+            await model.user.create({username, password})
         });
 
         it('Returns 200 Status and User Data without Password Hash', async () => {
 
-            const result = await request(app).post('/login')
-                .send({
-                    "username": "tim",
-                    "password": "super_secret"
-                })
+            const result = await request(app)
+                .post('/login')
+                .send({username, password})
                 .set('Accept', 'application/json');
 
+            // Todo: Check for cookie details
+            // Todo: Look into SuperAgent auth testing
 
             expect(result.statusCode).toBe(200);
             expect(result.body.id).toBeDefined();
             expect(result.body.createdAt).toBeDefined();
             expect(result.body.updatedAt).toBeDefined();
             expect(result.body.username).toBeDefined();
-            expect(result.body.username).toEqual('tim');
+            expect(result.body.username).toEqual(username);
             expect(result.body.password).toBeUndefined();
         });
 
-        it('Returns 401 Status and Error Message when Auth Fails', async () => {
+        it('Returns 401 Status and Error Message when Username is found but Password is Invalid', async () => {
 
-            const result = await request(app).post('/login')
+            const result = await request(app)
+                .post('/login')
                 .send({
-                    "username": "not_tim",
-                    "password": "wrong_secret"
+                    username: "jimbo",
+                    password: "wrong_secret"
                 })
                 .set('Accept', 'application/json');
 
@@ -82,6 +83,34 @@ describe('Auth Test Suite', () => {
             expect(result.body.error).toBeDefined();
 
         });
+
+        it('Returns 401 Status and Error Message when Username and Password are Invalid', async () => {
+
+            const result = await request(app)
+                .post('/login')
+                .send({
+                    username: "not_jimbo",
+                    password: "wrong_secret"
+                })
+                .set('Accept', 'application/json');
+
+
+            expect(result.statusCode).toBe(401);
+            expect(result.body.error).toBeDefined();
+
+        });
+
+        it('Returns 400 Status and Error Message when No Data is Provided', async () => {
+
+            const result = await request(app).post('/login')
+                .send({})
+                .set('Accept', 'application/json');
+
+            expect(result.statusCode).toBe(400);
+            expect(result.body.error).toBeDefined();
+
+        });
+
     });
 
 });

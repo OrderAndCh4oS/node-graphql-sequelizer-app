@@ -6,6 +6,81 @@ Content-Type: application/json
   "password": "password"
 }
 
+<> 2018-12-30T081720.200.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-30T081716.200.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-30T081643.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{}
+
+<> 2018-12-30T024135.400.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{}
+
+<> 2018-12-30T023829.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{}
+
+<> 2018-12-30T023812.401.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2018-12-30T023209.200.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
 <> 2018-12-30T021952.200.json
 
 ###
@@ -491,90 +566,6 @@ Content-Type: application/json
 }
 
 <> 2018-12-25T093852.200.json
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "",
-  "password": "pass-wrong"
-}
-
-<> 2018-12-25T093841.401.json
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2018-12-25T093831.200.json
-
-###
-
-POST http://localhost:3000/register
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2018-12-25T093819.200.json
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2018-12-24T094421.200.json
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "",
-  "password": "pass-wrong"
-}
-
-<> 2018-12-24T094416.401.json
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "pass-wrong"
-}
-
-<> 2018-12-24T094412.401.json
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2018-12-24T094403.200.json
 
 ###
 

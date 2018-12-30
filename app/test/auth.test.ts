@@ -31,12 +31,13 @@ describe('Auth Test Suite', () => {
                 .set('Accept', 'application/json');
 
             expect(result.statusCode).toBe(200);
-            expect(result.body.id).toBeDefined();
-            expect(result.body.createdAt).toBeDefined();
-            expect(result.body.updatedAt).toBeDefined();
-            expect(result.body.username).toBeDefined();
-            expect(result.body.username).toEqual(username);
-            expect(result.body.password).toBeUndefined();
+            expect(result.body.data).toBeDefined();
+            expect(result.body.data.id).toBeDefined();
+            expect(result.body.data.createdAt).toBeDefined();
+            expect(result.body.data.updatedAt).toBeDefined();
+            expect(result.body.data.username).toBeDefined();
+            expect(result.body.data.username).toEqual(username);
+            expect(result.body.data.password).toBeUndefined();
         });
     });
 
@@ -60,12 +61,13 @@ describe('Auth Test Suite', () => {
             // Todo: Look into SuperAgent auth testing
 
             expect(result.statusCode).toBe(200);
-            expect(result.body.id).toBeDefined();
-            expect(result.body.createdAt).toBeDefined();
-            expect(result.body.updatedAt).toBeDefined();
-            expect(result.body.username).toBeDefined();
-            expect(result.body.username).toEqual(username);
-            expect(result.body.password).toBeUndefined();
+            expect(result.body.data).toBeDefined();
+            expect(result.body.data.id).toBeDefined();
+            expect(result.body.data.createdAt).toBeDefined();
+            expect(result.body.data.updatedAt).toBeDefined();
+            expect(result.body.data.username).toBeDefined();
+            expect(result.body.data.username).toEqual(username);
+            expect(result.body.data.password).toBeUndefined();
         });
 
         it('Returns 401 Status and Error Message when Username is found but Password is Invalid', async () => {

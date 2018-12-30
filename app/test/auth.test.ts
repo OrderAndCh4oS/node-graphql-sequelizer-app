@@ -11,7 +11,7 @@ describe('Auth Test Suite', () => {
 
     beforeAll(async () => {
         // @ts-ignore
-        await model.sequelize.sync();
+        await model.sequelize.sync({force: true});
     });
 
     afterAll(() => {
@@ -26,10 +26,11 @@ describe('Auth Test Suite', () => {
             const username = "jane_doe";
             const password = "secret_word";
             const result = await request(app).post('/register')
-                .send({
-                    "username": username,
-                    "password": password
-                })
+                .type('json')
+                .send(JSON.stringify({
+                    username,
+                    password
+                }))
                 .set('Accept', 'application/json');
 
             expect(result.statusCode).toBe(200);

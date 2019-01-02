@@ -19,24 +19,14 @@ export const register = (req: Request, res: Response) => {
 };
 
 export const login = (req, res) => {
-    // Todo: find or create a better way to handle posted json validation. Perhaps a middleware would be better.
-    // Note: A middleware could be passed a validation object containing required parameters to check they all exist.
-    if (!(req.body.hasOwnProperty('username') && (req.body.hasOwnProperty('password')))) {
-        return errorResponse(res, 'Username and Password parameters required in json request')
-    }
-    model.user.scope('withPassword')
-        .findOne({where: {username: req.body.username}})
-        .then((user) => {
-            // @ts-ignore
-            if (!user || !user.validPassword(req.body.password, user.password)) {
-                return errorResponse(res, 'Username and Password parameters required in json request', statusCode.UNAUTHORIZED)
-            }
-            user = hidePasswordHash(user);
-            // @ts-ignore
-            req.session.user = user;
-            return dataResponse(res, user);
-        })
+    // Todo: Handle error messages to pass tests
+    let user = req.user;
+    user = hidePasswordHash(user);
+    // @ts-ignore
+    req.session.user = user;
+    return dataResponse(res, user);
 };
+
 
 export const logout = (req, res) => {
     req.session = null;

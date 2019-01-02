@@ -4,7 +4,7 @@ import { ObjectType, Field, Schema } from "graphene-js";
 class Query {
     @Field(String, {args: {name: String}})
     hello({name}) {
-        return `Jambo ${name || "stranger"}`;
+        return `Hello ${name || "stranger"}`;
     }
 }
 

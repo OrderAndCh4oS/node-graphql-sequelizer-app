@@ -1,3 +1,104 @@
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": ""
+}
+
+<> 2019-01-03T114049.400.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": ""
+}
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": ""
+}
+
+<> 2019-01-03T113945.400.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "jo",
+  "password": "pa"
+}
+
+<> 2019-01-03T113312.400.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "jo",
+  "password": "pa"
+}
+
+<> 2019-01-03T113145.400.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{}
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "jo",
+  "password": "pa"
+}
+
+<> 2019-01-03T112855.400.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": ""
+}
+
+<> 2019-01-03T112757.400.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "jo",
+  "password": "pa"
+}
+
+<> 2019-01-03T112728.400.json
+
+###
+
 GET http://localhost:3000/admin
 Content-Type: application/json
 
@@ -451,94 +552,6 @@ GET http://localhost:3000/admin
 Content-Type: application/json
 
 <> 2019-01-02T123152.200.json
-
-###
-
-GET http://localhost:3000/admin
-Content-Type: application/json
-
-<> 2019-01-02T123149.200.json
-
-###
-
-GET http://localhost:3000/admin
-Content-Type: application/json
-
-<> 2019-01-02T123122.200.json
-
-###
-
-GET http://localhost:3000/admin
-Content-Type: application/json
-
-<> 2019-01-02T120539.200.json
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "",
-  "password": "pass-wrong"
-}
-
-<> 2019-01-02T120507.400.txt
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "pass-wrong"
-}
-
-<> 2019-01-02T120503.401.txt
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2019-01-02T120453.200.json
-
-###
-
-POST http://localhost:3000/register
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2019-01-02T120450.200.json
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "",
-  "password": "pass-wrong"
-}
-
-<> 2019-01-02T120331.400.txt
-
-###
-
-GET http://localhost:3000/admin
-Content-Type: application/json
-
-<> 2019-01-02T115646.200.json
 
 ###
 

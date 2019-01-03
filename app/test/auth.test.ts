@@ -47,6 +47,28 @@ describe('Auth Test Suite', () => {
             expect(result.body.data.username).toEqual(username);
             expect(result.body.data.password).toBeUndefined();
         });
+
+        it('Returns 400 Status if data is invalid', async () => {
+            // Todo: move to mock data provider
+            const result = await request(app)
+                .post('/register')
+                .send({username: 'ja', password: 'pa'})
+                .set('Accept', 'application/json');
+
+            expect(result.statusCode).toBe(400);
+            expect(result.body.errors).toBeDefined();
+        });
+
+        it('Returns 400 Status if data is empty', async () => {
+            // Todo: move to mock data provider
+            const result = await request(app)
+                .post('/register')
+                .send({username: 'ja', password: 'pa'})
+                .set('Accept', 'application/json');
+
+            expect(result.statusCode).toBe(400);
+            expect(result.body.errors).toBeDefined();
+        });
     });
 
     describe('POST /login - Login a user', () => {
@@ -87,7 +109,7 @@ describe('Auth Test Suite', () => {
                 .set('Accept', 'application/json');
 
             expect(result.statusCode).toBe(401);
-            // expect(result.body.error).toBeDefined();
+            expect(result.body.statusCode).toBeDefined();
         });
 
         it('Returns 401 Status and Error Message when Username and Password are Invalid', async () => {
@@ -101,7 +123,7 @@ describe('Auth Test Suite', () => {
 
 
             expect(result.statusCode).toBe(401);
-            // expect(result.body.message).toBeDefined();
+            expect(result.body.message).toBeDefined();
         });
 
         it('Returns 400 Status and Error Message when No Data is Provided', async () => {
@@ -110,7 +132,7 @@ describe('Auth Test Suite', () => {
                 .set('Accept', 'application/json');
 
             expect(result.statusCode).toBe(400);
-            // expect(result.body.message).toBeDefined();
+            expect(result.body.message).toBeDefined();
         });
     });
 
@@ -164,7 +186,7 @@ describe('Auth Test Suite', () => {
                 .end((error, result) => {
                     expect(result.statusCode).toBe(401);
                     expect(result.body).toBeDefined();
-                    expect(result.body.error).toBeDefined();
+                    expect(result.body.statusCode).toBeDefined();
                     expect(result.body.message).toBeDefined();
                     expect(result.body.message).toEqual("Auth failed.");
                     return done()

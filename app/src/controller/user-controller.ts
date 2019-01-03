@@ -1,10 +1,12 @@
-import {ValidationError} from 'sequelize';
 import {Request, Response} from 'express';
+import {ValidationError} from 'sequelize';
 import {hidePasswordHash} from "../service/password-utilities";
 import model from "../model";
 import errorResponse from "../response/error";
-import statusCode from "../constants/status-code";
 import dataResponse from "../response/data";
+import messageResponse from "../response/message";
+
+const passport = require('passport');
 
 export const register = (req: Request, res: Response) => {
     model.user.create(req.body)
@@ -18,20 +20,25 @@ export const register = (req: Request, res: Response) => {
         });
 };
 
-export const login = (req, res) => {
-    // Todo: Handle error messages to pass tests
-    let user = req.user;
-    user = hidePasswordHash(user);
-    // @ts-ignore
-    req.session.user = user;
-    return dataResponse(res, user);
+export const login = (req, res, next) => {
+    if (!(req.body.hasOwnProperty('username') && (req.body.hasOwnProperty('password')))) {
+        return errorResponse(res, 'Username and Password parameters required in json request')
+    }
+    passport.authenticate('local', function (err, user, info) {
+        if (err) return next(err);
+        if (!user) return errorResponse(res, 'Auth failed.', 401);
+        user = hidePasswordHash(user);
+        req.logIn(user, function (err) {
+            if (err) return next(err);
+            dataResponse(res, user);
+        });
+    })(req, res, next)
 };
 
 
 export const logout = (req, res) => {
-    req.session = null;
-
-    return res.json({message: 'Logged out'})
+    req.logout();
+    return messageResponse(res, 'Logged out')
 };
 
 export const update = (req, res) => {

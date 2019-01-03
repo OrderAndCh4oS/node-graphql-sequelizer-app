@@ -1,10 +1,11 @@
 import {config} from 'dotenv';
 import routes from './routes';
-import express = require('express');
-import cookieSession = require('cookie-session');
-const passport = require('passport');
 import model from "./model";
 import localStrategy from "./authentication/local-strategy";
+import express = require('express');
+import cookieSession = require('cookie-session');
+
+const passport = require('passport');
 
 // Todo: Separate Server and App: https://stackoverflow.com/a/53712305/2562137
 
@@ -22,19 +23,16 @@ app.use(cookieSession({
 
 app.use(passport.initialize());
 app.use(passport.session());
-
 passport.serializeUser(function(user, done) {
     // @ts-ignore
     done(null, user.id);
 });
-
 passport.deserializeUser(function(id, done) {
     // @ts-ignore
     model.user.findByPk(id).then((user) => {
         done(null, user);
-    }).error((err) => done(err, null));
+    });
 });
-
 passport.use(localStrategy);
 
 app.use(express.json());

@@ -1,5 +1,5 @@
 
 
 export const admin = (req, res) => {
-    return res.json({message: req.session.user.username + ' is logged in'})
+    return res.json({message: req.user.username + ' is logged in'})
 };

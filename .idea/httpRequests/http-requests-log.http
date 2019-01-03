@@ -1,3 +1,440 @@
+GET http://localhost:3000/admin
+Content-Type: application/json
+
+<> 2019-01-03T105028.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T104913.500.html
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T104911.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T101848.200.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T101845.200.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T101842.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T101835.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T101626.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T101522.200.json
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T101519.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T101514.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": "pass-wrong"
+}
+
+<> 2019-01-03T101419.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": "pass-wrong"
+}
+
+<> 2019-01-03T101040.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{}
+
+<> 2019-01-03T101038.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{}
+
+<> 2019-01-03T101034.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T100937.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T100913.500.html
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T100844.500.html
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "pass-wrong"
+}
+
+<> 2019-01-03T100840.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "pass-wrong"
+}
+
+<> 2019-01-03T100751.401.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "pass-wrong"
+}
+
+<> 2019-01-03T100737.400.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T100734.500.html
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": "pass-wrong"
+}
+
+<> 2019-01-03T100729.400.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": "pass-wrong"
+}
+
+<> 2019-01-03T100713.400.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T100344.500.html
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T100341.200.json
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T100221.500.html
+
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T100112.500.html
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "john-boy",
+  "password": "password"
+}
+
+<> 2019-01-03T100110.200.json
+
+###
+
 POST http://localhost:3000/register
 Content-Type: application/json
 
@@ -102,410 +539,6 @@ GET http://localhost:3000/admin
 Content-Type: application/json
 
 <> 2019-01-02T115646.200.json
-
-###
-
-GET http://localhost:3000/admin
-Content-Type: application/json
-
-<> 2019-01-02T115638.200.json
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "pass-wrong"
-}
-
-<> 2019-01-02T115634.401.txt
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "pass-wrong"
-}
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "pass-wrong"
-}
-
-<> 2019-01-02T113024.401.txt
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "pass-wrong"
-}
-
-<> 2019-01-02T112827.401.txt
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "pass-wrong"
-}
-
-<> 2019-01-02T112816.401.txt
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2019-01-02T112758.200.json
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2019-01-02T112629.200.json
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2019-01-02T112611.500.html
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2019-01-02T111127.500.html
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2019-01-02T110755.500.html
-
-###
-
-POST http://localhost:3000/register
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2019-01-02T110751.200.json
-
-###
-
-GET http://localhost:3000/admin
-Content-Type: application/json
-
-<> 2019-01-02T095505.200.json
-
-###
-
-GET http://localhost:3000/admin
-Content-Type: application/json
-
-###
-
-GET http://localhost:3000/admin
-Content-Type: application/json
-
-<> 2019-01-02T095452.404.html
-
-###
-
-GET http://localhost:3000
-Content-Type: application/json
-
-<> 2019-01-02T080429.200.json
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2019-01-01T101549.200.json
-
-###
-
-POST http://localhost:3000/register
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2019-01-01T101436.200.json
-
-###
-
-POST http://localhost:3000/register
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2018-12-30T081720.200.json
-
-###
-
-POST http://localhost:3000/register
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2018-12-30T081716.200.json
-
-###
-
-POST http://localhost:3000/register
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2018-12-30T081643.200.json
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{}
-
-<> 2018-12-30T024135.400.json
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{}
-
-<> 2018-12-30T023829.401.json
-
-###
-
-POST http://localhost:3000/login
-Content-Type: application/json
-
-{}
-
-<> 2018-12-30T023812.401.json
-
-###
-
-POST http://localhost:3000/register
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2018-12-30T023209.200.json
-
-###
-
-POST http://localhost:3000/register
-Content-Type: application/json
-
-{
-  "username": "john-boy",
-  "password": "password"
-}
-
-<> 2018-12-30T021952.200.json
 
 ###
 

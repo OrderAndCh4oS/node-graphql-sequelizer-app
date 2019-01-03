@@ -101,7 +101,7 @@ describe('Auth Test Suite', () => {
 
 
             expect(result.statusCode).toBe(401);
-            // expect(result.body.error).toBeDefined();
+            // expect(result.body.message).toBeDefined();
         });
 
         it('Returns 400 Status and Error Message when No Data is Provided', async () => {
@@ -110,7 +110,7 @@ describe('Auth Test Suite', () => {
                 .set('Accept', 'application/json');
 
             expect(result.statusCode).toBe(400);
-            // expect(result.body.error).toBeDefined();
+            // expect(result.body.message).toBeDefined();
         });
     });
 
@@ -165,8 +165,8 @@ describe('Auth Test Suite', () => {
                     expect(result.statusCode).toBe(401);
                     expect(result.body).toBeDefined();
                     expect(result.body.error).toBeDefined();
-                    expect(result.body.error.message).toBeDefined();
-                    expect(result.body.error.message).toEqual("Auth failed.");
+                    expect(result.body.message).toBeDefined();
+                    expect(result.body.message).toEqual("Auth failed.");
                     return done()
                 });
         });

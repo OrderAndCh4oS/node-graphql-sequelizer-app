@@ -1,6 +1,9 @@
 import {GraphQLInt, GraphQLList, GraphQLNonNull, GraphQLObjectType, GraphQLString} from 'graphql';
 import model from "../model";
 
+// Todo: Look into implementing https://github.com/mickhansen/graphql-sequelize
+// Todo: Look into implementing https://github.com/mickhansen/dataloader-sequelize
+
 const UserType = new GraphQLObjectType({
     name: 'User',
     description: 'Users of the App',

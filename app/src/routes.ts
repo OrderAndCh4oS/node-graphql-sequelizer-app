@@ -1,4 +1,4 @@
-import {schema} from './schema';
+import schema from './graphql/schema';
 import * as userController from './controller/user-controller';
 import * as authenticationController from './controller/authentication-controller';
 import * as adminController from './controller/admin-controller';

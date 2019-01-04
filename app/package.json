@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "node -r ts-node/register",
-    "test": "export MYSQL_HOST=127.0.0.1; export MYSQL_PORT=3307; export ORM_LOGGING=false; jest --config=./jest.config.js",
+    "test": "export MYSQL_HOST=127.0.0.1; export MYSQL_PORT=3307; export ORM_LOGGING=false; jest --config=./jest.config.js --runInBand",
     "test-with-coverage": "yarn test -- --verbose --coverage",
     "test-watch": "yarn test -- --watch"
   },

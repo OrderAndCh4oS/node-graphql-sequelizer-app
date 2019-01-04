@@ -1,6 +1,6 @@
 import app from "./app";
 import {port} from './constants/server';
-import {syncSchema} from "./orm/schema";
+import {syncSchema} from "./orm/sync-schema";
 
 syncSchema();
 

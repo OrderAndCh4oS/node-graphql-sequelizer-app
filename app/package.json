@@ -1,4 +1,11 @@
 {
+  "description": "Node Express Sequelize and GraphQL App Starter",
+  "author": {
+    "name": "Sean Cooper",
+    "email": "sean@orderanchaoscreative.com",
+    "url": "https://orderandchaoscreative.com"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "node -r ts-node/register",
     "test": "export MYSQL_HOST=127.0.0.1; export MYSQL_PORT=3307; export ORM_LOGGING=false; jest --config=./jest.config.js --runInBand",

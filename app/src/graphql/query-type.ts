@@ -1,4 +1,6 @@
 import {GraphQLInt, GraphQLList, GraphQLNonNull, GraphQLObjectType, GraphQLString} from 'graphql';
+import {resolver} from "graphql-sequelize";
+
 import model from "../model";
 
 // Todo: Look into implementing https://github.com/mickhansen/graphql-sequelize
@@ -33,15 +35,11 @@ const QueryType = new GraphQLObjectType({
                     description: 'User id'
                 }
             },
-            resolve(_, args) {
-                return model.user.findByPk(args.id);
-            }
+            resolve: resolver(model.user)
         },
         users: {
             type: new GraphQLList(UserType),
-            resolve() {
-                return model.user.findAll({attributes: ['id', 'username']});
-            }
+            resolve: resolver(model.user)
         }
     }
 });

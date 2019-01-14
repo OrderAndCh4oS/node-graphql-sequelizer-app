@@ -1,1 +1,1 @@
-Node Express app using Sequelize, Graphene and GraphQL. All wrapped up in a docker image.
+Node Express app using Sequelize and GraphQL. All wrapped up in a docker image.

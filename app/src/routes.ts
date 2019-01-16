@@ -22,9 +22,9 @@ const routes = (app) => {
     app.post('/login', authenticationController.login);
     app.get('/logout', authenticationController.logout);
     app.get('/admin', authenticateUser, adminController.admin);
+    app.post('/task', authenticateUser, taskController.create);
     app.get('/task', authenticateUser, taskController.list);
     app.get('/task/:id', authenticateUser, taskController.detail);
-    app.post('/task', authenticateUser, taskController.create);
 };
 
 export default routes;

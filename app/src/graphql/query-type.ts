@@ -6,6 +6,17 @@ import model from "../model";
 // Todo: Look into implementing https://github.com/mickhansen/graphql-sequelize
 // Todo: Look into implementing https://github.com/mickhansen/dataloader-sequelize
 
+const TaskType = new GraphQLObjectType({
+    name: 'Tasks',
+    description: 'Users of the App',
+    // @ts-ignore
+    fields: {
+        id: {type: GraphQLInt},
+        title: {type: GraphQLString},
+        description: {type: GraphQLString},
+    }
+});
+
 const UserType = new GraphQLObjectType({
     name: 'User',
     description: 'Users of the App',
@@ -13,6 +24,10 @@ const UserType = new GraphQLObjectType({
     fields: {
         id: {type: GraphQLInt},
         username: {type: GraphQLString},
+        tasks: {
+            type: new GraphQLList(TaskType),
+            resolve: resolver(model.user.task)
+        }
     }
 });
 
@@ -40,6 +55,20 @@ const QueryType = new GraphQLObjectType({
         users: {
             type: new GraphQLList(UserType),
             resolve: resolver(model.user)
+        },
+        task: {
+            type: TaskType,
+            args: {
+                id: {
+                    type: GraphQLNonNull(GraphQLInt),
+                    description: 'User id'
+                }
+            },
+            resolve: resolver(model.task)
+        },
+        tasks: {
+            type: new GraphQLList(TaskType),
+            resolve: resolver(model.task)
         }
     }
 });

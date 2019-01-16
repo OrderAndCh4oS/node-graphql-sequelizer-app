@@ -49,6 +49,18 @@ describe('User Test Suite', () => {
             expect(result.statusCode).toBe(400);
             expect(result.body.errors).toBeDefined();
         });
+
+        it('Returns 400 Status if data is missing', async () => {
+            // Todo: move to mock data provider
+            // @ts-ignore
+            const result = await request(app)
+                .post('/register')
+                .send({})
+                .set('Accept', 'application/json');
+
+            expect(result.statusCode).toBe(400);
+            expect(result.body.errors).toBeDefined();
+        });
     });
 });
 

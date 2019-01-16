@@ -2,6 +2,7 @@ import {createContext, EXPECTED_OPTIONS_KEY} from 'dataloader-sequelize';
 
 import schema from './graphql/schema';
 import * as userController from './controller/user-controller';
+import * as taskController from './controller/task-controller';
 import * as authenticationController from './controller/authentication-controller';
 import * as adminController from './controller/admin-controller';
 import {authenticateUser} from "./middleware/authentication-middleware";
@@ -21,6 +22,9 @@ const routes = (app) => {
     app.post('/login', authenticationController.login);
     app.get('/logout', authenticationController.logout);
     app.get('/admin', authenticateUser, adminController.admin);
+    app.get('/task', authenticateUser, taskController.list);
+    app.get('/task/:id', authenticateUser, taskController.detail);
+    app.post('/task', authenticateUser, taskController.create);
 };
 
 export default routes;

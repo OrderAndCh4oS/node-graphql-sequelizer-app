@@ -8,11 +8,15 @@ export const UserModel = (sequelize: Sequelize, type: DataTypes) => {
         {
             username: {
                 type: type.STRING(44),
-                validate: usernameValidation
+                validate: usernameValidation,
+                allowNull: false,
+                defaultValue: '',
             },
             password: {
                 type: type.STRING,
-                validate: passwordValidation
+                validate: passwordValidation,
+                allowNull: false,
+                defaultValue: '',
             }
         },
         {

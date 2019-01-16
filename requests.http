@@ -20,6 +20,25 @@ Content-Type: application/json
 
 ###
 
+POST http://localhost:3000/task
+Content-Type: application/json
+
+{
+  "title": "Do this",
+  "description": "Complete this task"
+}
+
+###
+
+POST http://localhost:3000/task
+Content-Type: application/json
+
+{
+  "title": "Do this too"
+}
+
+###
+
 POST http://localhost:3000/register
 Content-Type: application/json
 

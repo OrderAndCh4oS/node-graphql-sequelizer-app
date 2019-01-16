@@ -2,6 +2,7 @@ import * as Sequelize from "sequelize";
 import {UserModel} from "./user-model";
 import * as mysql from "../constants/mysql";
 import * as orm from "../constants/orm";
+import {TaskModel} from "./task-model";
 
 // Todo: Finish setup from: https://grokonez.com/node-js/sequelize/angular-6-httpclient-node-js-express-restapis-mariadb-example-sequelize-orm-crud-apis-example
 
@@ -21,8 +22,11 @@ const sequelize = new Sequelize(
     });
 
 const model = {
-    user: UserModel(sequelize, Sequelize)
+    user: UserModel(sequelize, Sequelize),
+    task: TaskModel(sequelize, Sequelize)
 };
+
+model.user.hasMany(model.task);
 
 // @ts-ignore
 model.Sequelize = Sequelize;

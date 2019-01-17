@@ -15,6 +15,19 @@ export const create = (req: Request, res: Response) => {
         });
 };
 
+
+export const update = (req: Request, res: Response) => {
+    model.task.findById(req.body.id).then(task =>
+        task.update(req.body)
+            .then(task => {
+                return dataResponse(res, task);
+            })
+            .catch(ValidationError, err => {
+                validationErrorResponse(res, err);
+            })
+    );
+};
+
 export const list = (req: Request, res: Response) => {
     model.task.findAndCountAll().then(result => {
         return dataResponse(res, result);
@@ -25,8 +38,4 @@ export const detail = (req: Request, res: Response) => {
     model.task.findById(req.params.id).then(task => {
         return dataResponse(res, task);
     })
-};
-
-export const update = (req, res) => {
-
 };

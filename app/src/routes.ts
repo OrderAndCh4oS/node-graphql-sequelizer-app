@@ -23,6 +23,7 @@ const routes = (app) => {
     app.get('/logout', authenticationController.logout);
     app.get('/admin', authenticateUser, adminController.admin);
     app.post('/task', authenticateUser, taskController.create);
+    app.put('/task', authenticateUser, taskController.update);
     app.get('/task', authenticateUser, taskController.list);
     app.get('/task/:id', authenticateUser, taskController.detail);
 };

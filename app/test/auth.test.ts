@@ -1,6 +1,7 @@
 import * as request from 'supertest';
 import model from "../src/model";
 import app from "../src/app";
+import {authFailGet, login} from "./utility";
 
 // Todo: look up Jest setup files: https://jestjs.io/docs/en/configuration.html#setupfiles-array
 
@@ -129,28 +130,13 @@ describe('Auth Test Suite', () => {
             await model.user.create({username, password})
         });
 
-        it('Returns 401 Status if User is not logged in', async () => {
-            // @ts-ignore
-            const result = await agent
-                .get('/admin')
-                .set('Accept', 'application/json');
+        it('Returns 401 Status if User is not logged in',
+            authFailGet(agent, '/admin')
+        );
 
-            expect(result.statusCode).toBe(401);
-            expect(result.body).toBeDefined();
-            expect(result.body.statusCode).toBeDefined();
-            expect(result.body.message).toBeDefined();
-            expect(result.body.message).toEqual("Auth failed.");
-        });
-
-        it('Should start with signin', async () => {
-            // @ts-ignore
-            const result = await agent
-                .post('/login')
-                .send({username, password})
-                .set('Accept', 'application/json');
-
-            expect(result.statusCode).toBe(200);
-        });
+        it('Should start with signin',
+            login(agent, {username, password})
+        );
 
         it('Returns 200 Status and a Message with the users name if User is logged in', async () => {
             // @ts-ignore

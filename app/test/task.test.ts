@@ -39,7 +39,9 @@ describe('Auth Test Suite', () => {
 
             successTests(result);
             expect(result.body.data.title).toBeDefined();
+            expect(result.body.data.title).toEqual(task.title);
             expect(result.body.data.description).toBeDefined();
+            expect(result.body.data.description).toEqual(task.description);
         });
     });
 
@@ -60,7 +62,7 @@ describe('Auth Test Suite', () => {
         });
 
         it('Returns 401 Status if User is not logged in',
-            authFailPut(agent, '/task', task)
+            authFailPut(agent, '/task/1', task)
         );
 
         it('Should start with signin',
@@ -70,7 +72,7 @@ describe('Auth Test Suite', () => {
         it('Returns 200 Status and the created task if User is logged in', async () => {
             // @ts-ignore
             const result = await agent
-                .put('/task')
+                .put('/task/1')
                 .send(task)
                 .set('Accept', 'application/json');
 

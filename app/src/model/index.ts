@@ -9,8 +9,7 @@ const sequelize = new Sequelize(
     mysql.DATABASE, mysql.USER, mysql.PASSWORD,
     {
         dialect: 'mysql',
-        host: mysql.HOST,
-        port: mysql.PORT,
+        host: 'db',
         pool: {
             max: 5,
             min: 0,

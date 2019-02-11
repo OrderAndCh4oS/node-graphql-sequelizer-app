@@ -1,7 +1,8 @@
 import * as request from 'supertest';
-import model from "../src/model";
 import app from "../src/app";
 import {authFailGet, authFailPost, authFailPut, login, successTests} from "./utility";
+
+const db = require("../src/db/models");
 
 // Todo: look up Jest setup files: https://jestjs.io/docs/en/configuration.html#setupfiles-array
 
@@ -19,7 +20,7 @@ describe('Auth Test Suite', () => {
         const task = {title: "Do this", description: "This needs to be done"};
 
         beforeAll(async () => {
-            await model.user.create(user)
+            await db.user.create(user)
         });
 
         it('Returns 401 Status if User is not logged in',
@@ -58,7 +59,7 @@ describe('Auth Test Suite', () => {
         };
 
         beforeAll(async () => {
-            await model.user.create(user)
+            await db.user.create(user)
         });
 
         it('Returns 401 Status if User is not logged in',
@@ -92,7 +93,7 @@ describe('Auth Test Suite', () => {
         };
 
         beforeAll(async () => {
-            await model.user.create(user)
+            await db.user.create(user)
         });
 
         it('Returns 401 Status if User is not logged in',
@@ -123,7 +124,7 @@ describe('Auth Test Suite', () => {
         };
 
         beforeAll(async () => {
-            await model.user.create(user)
+            await db.user.create(user)
         });
 
         it('Returns 401 Status if User is not logged in',
@@ -148,4 +149,3 @@ describe('Auth Test Suite', () => {
         });
     });
 });
-

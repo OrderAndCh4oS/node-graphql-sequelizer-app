@@ -22,14 +22,14 @@ const user = UserModel(sequelize, Sequelize);
 const task = TaskModel(sequelize, Sequelize);
 user.task = user.hasMany(task, {as: 'tasks'});
 
-const model = {
+const db = {
     user,
     task
 };
 
 // @ts-ignore
-model.Sequelize = Sequelize;
+db.Sequelize = Sequelize;
 // @ts-ignore
-model.sequelize = sequelize;
+db.sequelize = sequelize;
 
-export default model;
+export default db;

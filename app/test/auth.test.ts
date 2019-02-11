@@ -1,7 +1,8 @@
 import * as request from 'supertest';
-import model from "../src/model";
 import app from "../src/app";
 import {authFailGet, login} from "./utility";
+
+const db = require("../src/db/models");
 
 // Todo: look up Jest setup files: https://jestjs.io/docs/en/configuration.html#setupfiles-array
 
@@ -16,7 +17,7 @@ describe('Auth Test Suite', () => {
         const password = 'too_secret';
 
         beforeAll(async () => {
-            await model.user.create({username, password})
+            await db.user.create({username, password})
         });
 
         it('Returns 200 Status and User Data without Password Hash', async () => {
@@ -85,7 +86,7 @@ describe('Auth Test Suite', () => {
         const password = 'too_secret';
 
         beforeAll(async () => {
-            await model.user.create({username, password})
+            await db.user.create({username, password})
         });
 
         it('Returns 200 Status and Message if User is not logged in', async () => {
@@ -127,7 +128,7 @@ describe('Auth Test Suite', () => {
         const password = 'too_secret';
 
         beforeAll(async () => {
-            await model.user.create({username, password})
+            await db.user.create({username, password})
         });
 
         it('Returns 401 Status if User is not logged in',

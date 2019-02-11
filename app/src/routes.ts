@@ -1,23 +1,23 @@
 import {createContext, EXPECTED_OPTIONS_KEY} from 'dataloader-sequelize';
-
-import schema from './graphql/schema';
+// import schema from './graphql/schema';
 import UserController from './controller/user-controller';
 import TaskController from './controller/task-controller';
 import AuthenticationController from './controller/authentication-controller';
 import AdminController from './controller/admin-controller';
 import {authenticateUser} from "./middleware/authentication-middleware";
-import model from "./model";
+
+const db = require("./db/models");
 
 const graphqlHTTP = require('express-graphql');
 
 const routes = (app) => {
     app.get('/', (req, res) => res.json({message: 'Hello World!'}));
-    app.use('/graphql', graphqlHTTP({
-        schema: schema,
-        graphiql: true,
-        // @ts-ignore
-        context: {[EXPECTED_OPTIONS_KEY]: createContext(model.sequelize)}
-    }));
+    // app.use('/graphql', graphqlHTTP({
+    //     schema: schema,
+    //     graphiql: true,
+    //     // @ts-ignore
+    //     context: {[EXPECTED_OPTIONS_KEY]: createContext(db.sequelize)}
+    // }));
     app.post('/register', UserController.register);
     app.post('/login', AuthenticationController.login);
     app.get('/logout', AuthenticationController.logout);

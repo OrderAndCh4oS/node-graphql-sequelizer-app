@@ -1,12 +1,13 @@
 import {Request, Response} from 'express';
 import {ValidationError} from 'sequelize';
-import model from '../model';
 import dataResponse from '../response/data';
 import validationErrorResponse from "../response/validation-error";
 
+const db = require("../db/models");
+
 export default class TaskController {
     static create = (req: Request, res: Response) => {
-        model.task.create(req.body)
+        db.task.create(req.body)
             .then(task => {
                 req.user.setTasks([task]);
                 return dataResponse(res, task);
@@ -18,7 +19,7 @@ export default class TaskController {
 
 
     static update = (req: Request, res: Response) => {
-        model.task.findById(req.params.id).then(task =>
+        db.task.findById(req.params.id).then(task =>
             task.update(req.body)
                 .then(task => {
                     return dataResponse(res, task);
@@ -30,7 +31,7 @@ export default class TaskController {
     };
 
     static destroy = (req: Request, res: Response) => {
-        model.task.findById(req.params.id).then(task =>
+        db.task.findById(req.params.id).then(task =>
             task.update(req.body)
                 .then(task => {
                     return dataResponse(res, task);
@@ -42,13 +43,13 @@ export default class TaskController {
     };
 
     static list = (req: Request, res: Response) => {
-        model.task.findAndCountAll().then(result => {
+        db.task.findAndCountAll().then(result => {
             return dataResponse(res, result);
         })
     };
 
     static detail = (req: Request, res: Response) => {
-        model.task.findById(req.params.id).then(task => {
+        db.task.findById(req.params.id).then(task => {
             return dataResponse(res, task);
         })
     };
